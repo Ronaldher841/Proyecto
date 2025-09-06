@@ -1,0 +1,143 @@
+/* Importa fuentes de Google para un look moderno y limpio */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5; /* Un color de fondo claro y suave */
+    line-height: 1.6;
+    color: #333; /* Gris oscuro para buena legibilidad */
+}
+
+#container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden; /* Importante para mantener todo dentro del contenedor */
+}
+
+/* Estilos del encabezado */
+header {
+    background: linear-gradient(135deg, #1e90ff, #00bfff); /* Un degradado azul vibrante */
+    color: #ffffff;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 3.5rem; /* Título grande e impactante */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de navegación */
+nav {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem; /* Espaciado entre los enlaces de navegación */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1e90ff; /* Efecto al pasar el ratón en azul brillante */
+    transform: translateY(-3px); /* Un ligero levantamiento al pasar el ratón */
+}
+
+/* Estilos del contenido principal */
+#content {
+    display: grid;
+    /* Ajuste para que los contenedores vayan pegados y ordenados */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Mínimo 300px, se expanden */
+    gap: 1.5rem; /* Menor espacio entre los artículos para que estén más juntos */
+    padding: 2rem;
+}
+
+.article {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Usamos flexbox para alinear contenido interno */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido dentro del article */
+    text-align: center; /* Centra el texto también */
+}
+
+.article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.article-image {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor del artículo */
+    max-height: 200px; /* Altura máxima para las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    margin-bottom: 1rem; /* Espacio entre la imagen y el título */
+}
+
+.article h2 {
+    font-size: 1.7rem;
+    color: #1e90ff;
+    margin-bottom: 0.75rem;
+}
+
+.article p {
+    font-size: 1rem;
+    color: #666;
+    flex-grow: 1; /* Permite que el párrafo ocupe el espacio disponible */
+}
+
+/* Estilos del pie de página */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: #f0f2f5;
+    font-size: 0.9rem;
+    border-top: 2px solid #1e90ff;
+}
+
+/* Media query para asegurar que los artículos se apilen en pantallas pequeñas */
+@media (max-width: 768px) {
+    #content {
+        grid-template-columns: 1fr; /* Un solo contenedor por fila */
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
